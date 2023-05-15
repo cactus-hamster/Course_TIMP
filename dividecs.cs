@@ -26,27 +26,27 @@ namespace Курсовая
                 textBox1.Text.Contains('=') || textBox1.Text.Contains('%') || textBox1.Text.Contains('!') || textBox2.Text.Contains('/') ||
                 textBox2.Text.Contains("|") || textBox2.Text.Contains('*') || textBox2.Text.Contains('=') ||
                 textBox2.Text.Contains('=') || textBox2.Text.Contains('%') || textBox2.Text.Contains('!'))
-            {
-                MessageBox.Show("Недопусимые символы в строке - /, |, *, =");
-                return;
-            }
-            if (Polinom.Polinom.StandardizePolynomial(textBox1.Text) == "0")
-            {
-                MessageBox.Show("Делимое не может быть нулевым");
-                return;
-            }
-            if (Polinom.Polinom.StandardizePolynomial(textBox2.Text) == "0")
-            {
-                MessageBox.Show("Делитель не может быть нулевым");
-                return;
-            }
-            if (Polinom.Polinom.ParsePolynomial(Polinom.Polinom.StandardizePolynomial(textBox1.Text)).Length < Polinom.Polinom.ParsePolynomial(Polinom.Polinom.StandardizePolynomial(textBox2.Text)).Length)
-            {
-                MessageBox.Show("Степень делителя должна быть меньше или равна степени делимого!");
-                return;
-            }
+                {
+                    MessageBox.Show("Недопусимые символы в строке - /, |, *, =");
+                    return;
+                }
             try
             {
+                if (Polinom.Polinom.StandardizePolynomial(textBox1.Text) == "0")
+                {
+                    MessageBox.Show("Делимое не может быть нулевым");
+                    return;
+                }
+                if (Polinom.Polinom.StandardizePolynomial(textBox2.Text) == "0")
+                {
+                    MessageBox.Show("Делитель не может быть нулевым");
+                    return;
+                }
+                if (Polinom.Polinom.ParsePolynomial(Polinom.Polinom.StandardizePolynomial(textBox1.Text)).Length < Polinom.Polinom.ParsePolynomial(Polinom.Polinom.StandardizePolynomial(textBox2.Text)).Length)
+                {
+                    MessageBox.Show("Степень делителя должна быть меньше или равна степени делимого!");
+                    return;
+                }
                 string[] k = Polinom.Polinom.DividePolynomials(textBox1.Text, textBox2.Text);
                 textBox3.Text += "Частное " + k[0] + " и остаток " + k[1];
             }

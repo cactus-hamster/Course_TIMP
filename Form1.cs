@@ -7,6 +7,8 @@ namespace Курсовая
     {
         public Form1()
         {
+            using (ApplicationContext db = new ApplicationContext())
+            { }
             InitializeComponent();
         }
         //привести к стандартному виду
