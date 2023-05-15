@@ -48,14 +48,8 @@ namespace Курсовая
                     MessageBox.Show("Степень делителя должна быть меньше или равна степени делимого!");
                     return;
                 }
-                Stopwatch stopwatch = new Stopwatch();
-                //засекаем время начала операции
-                stopwatch.Start();
-                //выполняем какую-либо операцию
+
                 string[] k = Polinom.Polinom.DividePolynomials(textBox1.Text, textBox2.Text);
-                stopwatch.Stop();
-                //смотрим сколько миллисекунд было затрачено на выполнение
-                textBox3.Text += (stopwatch.ElapsedMilliseconds) + "\r\n";
                 textBox3.Text += "Частное " + k[0] + " и остаток " + k[1];
             }
             catch (FormatException)
