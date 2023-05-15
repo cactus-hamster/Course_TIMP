@@ -67,6 +67,8 @@
             textBox3.Location = new Point(85, 323);
             textBox3.Multiline = true;
             textBox3.Name = "textBox3";
+            textBox3.ReadOnly = true;
+            textBox3.ScrollBars = ScrollBars.Vertical;
             textBox3.Size = new Size(448, 53);
             textBox3.TabIndex = 3;
             // 

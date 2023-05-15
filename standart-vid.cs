@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Globalization;
 using System.Linq;
@@ -40,7 +41,7 @@ namespace Курсовая
             }
             try
             {
-                textBox1.Text += Polinom.Polinom.StandardizePolynomial(textBox2.Text);
+                textBox1.Text += Polinom.Polinom.StandardizePolynomial(textBox2.Text) + "\r\n";
             }
             catch (FormatException)
             {
@@ -51,7 +52,7 @@ namespace Курсовая
                 MessageBox.Show("Непредвиденная ошибка, пожалуйста, убедитесь в корректности ввода.");
                 form1.output_errors(ex, "standart-vid");
             }
-            
+
         }
     }
 }

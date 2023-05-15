@@ -55,6 +55,7 @@
             textBox3.Multiline = true;
             textBox3.Name = "textBox3";
             textBox3.ReadOnly = true;
+            textBox3.ScrollBars = ScrollBars.Vertical;
             textBox3.Size = new Size(336, 67);
             textBox3.TabIndex = 25;
             // 

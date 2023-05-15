@@ -21,8 +21,8 @@ namespace Курсовая
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(textBox1.Text.Contains('/')|| textBox1.Text.Contains("|")||textBox1.Text.Contains('*')|| textBox1.Text.Contains('=')||
-                textBox1.Text.Contains('=')|| textBox1.Text.Contains('%')|| textBox1.Text.Contains('!')|| textBox2.Text.Contains('/') || 
+            if (textBox1.Text.Contains('/') || textBox1.Text.Contains("|") || textBox1.Text.Contains('*') || textBox1.Text.Contains('=') ||
+                textBox1.Text.Contains('=') || textBox1.Text.Contains('%') || textBox1.Text.Contains('!') || textBox2.Text.Contains('/') ||
                 textBox2.Text.Contains("|") || textBox2.Text.Contains('*') || textBox2.Text.Contains('=') ||
                 textBox2.Text.Contains('=') || textBox2.Text.Contains('%') || textBox2.Text.Contains('!'))
             {

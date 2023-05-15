@@ -55,6 +55,7 @@
             textBox3.Multiline = true;
             textBox3.Name = "textBox3";
             textBox3.ReadOnly = true;
+            textBox3.ScrollBars = ScrollBars.Vertical;
             textBox3.Size = new Size(336, 67);
             textBox3.TabIndex = 16;
             // 
@@ -81,9 +82,10 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(310, 104);
+            label3.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Location = new Point(298, 84);
             label3.Name = "label3";
-            label3.Size = new Size(19, 20);
+            label3.Size = new Size(43, 46);
             label3.TabIndex = 13;
             label3.Text = "+";
             // 

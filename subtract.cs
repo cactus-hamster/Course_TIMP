@@ -46,7 +46,7 @@ namespace Курсовая
             {
                 MessageBox.Show("Некорректный ввод");
             }
-            catch(Exception ex) 
+            catch (Exception ex)
             {
                 MessageBox.Show("Непредвиденная ошибка, пожалуйста, убедитесь в корректности ввода.");
                 form1.output_errors(ex, "subtract");

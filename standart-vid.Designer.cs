@@ -41,6 +41,8 @@
             textBox1.Location = new Point(96, 202);
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
+            textBox1.ReadOnly = true;
+            textBox1.ScrollBars = ScrollBars.Vertical;
             textBox1.Size = new Size(380, 67);
             textBox1.TabIndex = 0;
             // 
@@ -49,6 +51,7 @@
             textBox2.Location = new Point(96, 71);
             textBox2.Multiline = true;
             textBox2.Name = "textBox2";
+            textBox2.ScrollBars = ScrollBars.Vertical;
             textBox2.Size = new Size(380, 67);
             textBox2.TabIndex = 1;
             // 

@@ -49,6 +49,6 @@ namespace Курсовая
                 form1.output_errors(ex, "subtract");
             }
         }
-                   
+
     }
 }
