@@ -1,0 +1,56 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Globalization;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Курсовая
+{
+    public partial class subtract : Form
+    {
+        Form1 form1;
+        public subtract(Form1 owner)
+        {
+            form1 = owner;
+            InitializeComponent();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            textBox1.Clear();
+            textBox2.Clear();
+            textBox3.Clear();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            textBox3.Clear();
+            if (textBox1.Text.Contains('/') || textBox1.Text.Contains("|") || textBox1.Text.Contains('*') || textBox1.Text.Contains('=') ||
+                textBox1.Text.Contains('=') || textBox1.Text.Contains('%') || textBox1.Text.Contains('!') || textBox2.Text.Contains('/') ||
+                textBox2.Text.Contains("|") || textBox2.Text.Contains('*') || textBox2.Text.Contains('=') ||
+                textBox2.Text.Contains('=') || textBox2.Text.Contains('%') || textBox2.Text.Contains('!'))
+            {
+                MessageBox.Show("Недопусимые символы в строке - /, |, *, =");
+                return;
+            }
+            try
+            {
+                textBox3.Text += Polinom.Polinom.SubtractPolynomials(textBox1.Text, textBox2.Text);
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("Некорректный ввод");
+            }
+            catch(Exception ex) 
+            {
+                MessageBox.Show("Непредвиденная ошибка, пожалуйста, убедитесь в корректности ввода.");
+                form1.output_errors(ex, "subtract");
+            }
+        }
+    }
+}
