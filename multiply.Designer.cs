@@ -138,7 +138,7 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Name = "multiply";
-            Text = "multiply";
+            Text = "Умножение";
             ResumeLayout(false);
             PerformLayout();
         }

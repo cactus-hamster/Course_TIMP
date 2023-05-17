@@ -138,7 +138,7 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Name = "dividecs";
-            Text = "dividecs";
+            Text = "Разделить";
             ResumeLayout(false);
             PerformLayout();
         }

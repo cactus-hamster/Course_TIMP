@@ -48,7 +48,6 @@ namespace Курсовая
                     MessageBox.Show("Степень делителя должна быть меньше или равна степени делимого!");
                     return;
                 }
-
                 string[] k = Polinom.Polinom.DividePolynomials(textBox1.Text, textBox2.Text);
                 textBox3.Text += "Частное " + k[0] + " и остаток " + k[1];
             }
