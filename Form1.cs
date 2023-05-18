@@ -47,7 +47,7 @@ namespace Курсовая
             Add newForm = new Add(this);
             newForm.Show();
         }
-        public void output_errors(Exception ex, string form)//принимаемые ошибки
+        public async Task output_errors(Exception ex, string form)//принимаемые ошибки
         {
            using (ApplicationContext db = new ApplicationContext())
            {
@@ -58,8 +58,8 @@ namespace Курсовая
                     dateTimeExc = DateTime.Now,
                     indexForm = form
                 };
-                db.UserException.Add(exception);
-                db.SaveChanges();
+                await db.UserException.AddAsync(exception);
+                await db.SaveChangesAsync();
            }
         }
     }
